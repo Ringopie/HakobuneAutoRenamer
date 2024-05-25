@@ -1,0 +1,2 @@
+# HakobuneAutoRenamer
+はこぶねオートリネーマー用リポジトリ。
