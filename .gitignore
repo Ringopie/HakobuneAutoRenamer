@@ -13,3 +13,4 @@
 *.log
 *.swp
 *.bak
+/bin/

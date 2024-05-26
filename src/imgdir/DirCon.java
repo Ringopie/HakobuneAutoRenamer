@@ -9,6 +9,10 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -33,7 +37,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;
 
 public class DirCon extends JFrame implements ActionListener {
 
@@ -143,6 +146,7 @@ public class DirCon extends JFrame implements ActionListener {
         fileChooser.setFileFilter(filter);
 
         int returnVal = fileChooser.showOpenDialog(this);
+        JOptionPane.showMessageDialog(null, "tesutest");
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File[] selectedFiles = fileChooser.getSelectedFiles();
             loadImageAndRecognizeText(selectedFiles);
@@ -165,7 +169,9 @@ public class DirCon extends JFrame implements ActionListener {
         for (File file : files) {
             CompletableFuture.supplyAsync(() -> {
                 try {
+                	JOptionPane.showMessageDialog(null, "tesutest");
                     BufferedImage image = ImageIO.read(file);
+                    JOptionPane.showMessageDialog(null, "tesutest");
                     String resultText = recognizeText(image);
                     return new FilePreviewPanel(file.getName(), resultText, image);
                 } catch (IOException e) {
@@ -186,6 +192,14 @@ public class DirCon extends JFrame implements ActionListener {
         }
     }
     
+    private void extractResourceToFile(String resourcePath, Path targetPath) throws IOException {
+        try (InputStream resourceStream = getClass().getClassLoader().getResourceAsStream(resourcePath)) {
+            if (resourceStream == null) {
+                throw new IOException("Resource not found: " + resourcePath);
+            }
+            Files.copy(resourceStream, targetPath, StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
     
    /**
     * 画像をOCR処理して、解読結果を返します。
@@ -193,49 +207,73 @@ public class DirCon extends JFrame implements ActionListener {
     * @return 解読結果
     */
     private String recognizeText(BufferedImage image) {
-        ITesseract tesseract = new Tesseract();
-        tesseract.setDatapath(this.getClass()
-        		.getClassLoader().getResource("")
-        		.getPath().substring(1, 21) + "tessdata");
-        tesseract.setTessVariable("user_defined_dpi", "500");
-        tesseract.setPageSegMode(3);
-        tesseract.setLanguage("eng");
+    	
+		try {
+			ITesseract tesseract = new Tesseract();
+			JOptionPane.showMessageDialog(null, "tesutest");
+	    	File file = new File(this.getClass().getResource("").getPath().toString());
+	    	String tmp = "";
+			try {
+				tmp = file.getCanonicalPath();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			JOptionPane.showMessageDialog(null, file.getPath());
+	    	
+	    	try {
+	    		tesseract.setDatapath(file.getPath()); // tmp.substring(0, tmp.length() - 6)
+	    	} catch(Throwable t) {
+	    		JOptionPane.showMessageDialog(null, t);
+	    	}
+	        
+	        tesseract.setTessVariable("user_defined_dpi", "500");
+	        tesseract.setPageSegMode(3);
+	        tesseract.setLanguage("eng");
 
-        try {
-            BufferedImage subImage = image.getSubimage(0, 0, 500, 200);
-            String ocrResult = tesseract.doOCR(subImage).replaceAll("opaumon","OPERATION");
-            System.out.println(ocrResult);
-            
-            String resultText = ocrResult
-            		.replaceAll(" — ", "-")
-            		.replaceAll("", ocrResult)
-            		.replaceAll("—","-")
-            		.replaceAll(" ", "")
-            		.replaceAll("‘", "")
-            		.split("\n")[0];
-            resultText = resultText.substring(resultText.indexOf('N') + 1)
-            		.replaceAll(",", "")
-            		.replaceAll("Q", "7")
-            		.replaceAll("opammon", "")
-            		.replaceAll("--", "-")
-            		.replaceAll("-8-", "-S-")
-            		.replaceAll("_", "-")
-            		.toUpperCase();
-            
-            Matcher matcher = Pattern.compile("^(.*?-\\w)(\\w+)$").matcher(resultText);
-            System.out.println(resultText);
-            if (matcher.lookingAt()) {
-                resultText = matcher.group(1);
-            }
-            return resultText;
-        } catch (TesseractException te) {
-        	JOptionPane.showMessageDialog(null,
-        			"画像がうまく読み込めなかった可能性があります。\n"
-        			+ "エラーログを出力します\n"
-        			+ te.getMessage(), "エラー発生",
-        			JOptionPane.ERROR_MESSAGE);
-            return "Error";
-        }
+	        try {
+	            BufferedImage subImage = image.getSubimage(0, 0, 500, 200);
+	            JOptionPane.showMessageDialog(null, tmp.substring(0, tmp.length() - 6) + "tessdata");
+	            String ocrResult = tesseract.doOCR(subImage).replaceAll("opaumon","OPERATION");
+	            JOptionPane.showMessageDialog(null, "test2");
+	            String resultText = ocrResult
+	            		.replaceAll(" — ", "-")
+	            		.replaceAll("", ocrResult)
+	            		.replaceAll("—","-")
+	            		.replaceAll(" ", "")
+	            		.replaceAll("‘", "")
+	            		.split("\n")[0];
+	            resultText = resultText.substring(resultText.indexOf('N') + 1)
+	            		.replaceAll(",", "")
+	            		.replaceAll("Q", "7")
+	            		.replaceAll("opammon", "")
+	            		.replaceAll("--", "-")
+	            		.replaceAll("-8-", "-S-")
+	            		.replaceAll("_", "-")
+	            		.toUpperCase();
+	            
+	            Matcher matcher = Pattern.compile("^(.*?-\\w)(\\w+)$").matcher(resultText);
+	            System.out.println(resultText);
+	            if (matcher.lookingAt()) {
+	                resultText = matcher.group(1);
+	            }
+	            return resultText;
+	        } catch (Throwable t) {
+	        	for(StackTraceElement s : t.getStackTrace()) {
+	        		JOptionPane.showMessageDialog(null,
+		        			"画像がうまく読み込めなかった可能性があります。\n"
+		        			+ "エラーログを出力します\n"
+		        			+ s.toString(), "エラー発生",
+		        			JOptionPane.ERROR_MESSAGE);
+	        	}
+	        	
+	            return "Error";
+	        }
+		} catch (Throwable t) {
+			// TODO 自動生成された catch ブロック
+			JOptionPane.showMessageDialog(null, t.fillInStackTrace());
+		}
+		return null;
+    	
     }
     
     /**
