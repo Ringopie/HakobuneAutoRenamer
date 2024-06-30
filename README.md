@@ -51,6 +51,12 @@ https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=ms
 本プロジェクトを使用、変更、または配布する際は、Apache License 2.0および含まれる各ライブラリのライセンス条項を遵守した上で、必要であれば以下のコピーライト表記をご利用ください。<br>
 <code>Copyright © 2024 YOURI All rights reserved.</code>
 
+## 免責
+
+本アプリケーションのデータの著作権は「HYPERGRYPH」様、「Yostar」様に帰属します。<br>
+本アプリケーションを使用したことによって生じたすべての損害や不具合等に関しては、一切の責任を負いません。<br>
+各自の責任においてご使用ください。<br>
+
 ## 今後のアップデート予定
 
 ・AI学習によるOCRの最適化<br>
