@@ -1,0 +1,370 @@
+This project uses multiple open-source libraries.
+The source code for this project is available on GitHub (include your project's URL here).
+The source code for the libraries listed below can be downloaded from each library's official website or GitHub repository.
+Please refer to each library's website for information on how to obtain its source code.
+
+
+
+
+
+commons-beanutils-1.9.2.jar
+http://commons.apache.org/proper/commons-beanutils/
+Apache License, Version 2.0
+
+Apache Commons BeanUtils
+Copyright 2000-2024 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+
+-----------------------------------------------------------------
+
+commons-io-2.6.jar
+https://commons.apache.org/proper/commons-io/
+Apache License, Version 2.0
+
+Apache Commons IO
+Copyright 2002-2024 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+
+-----------------------------------------------------------------
+
+commons-logging-1.2.jar
+https://commons.apache.org/proper/commons-logging/
+Apache License, Version 2.0
+
+Apache Commons Logging
+Copyright 2001-2024 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+
+-----------------------------------------------------------------
+
+fontbox-2.0.9.jar
+https://pdfbox.apache.org/
+Apache License, Version 2.0
+
+Apache FontBox
+Copyright 2008-2018 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+
+Based on source code contributed to the original FontBox project.
+Copyright (c) 2006-2007, www.fontbox.org
+
+Includes the Script Property (Scripts-10.0.0.txt)
+Copyright 2017 Unicode, Inc.
+
+-----------------------------------------------------------------
+
+pdfbox-2.0.9.jar
+https://pdfbox.apache.org/
+Apache License, Version 2.0
+
+Apache PDFBox
+Copyright 2002-2018 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+
+Based on source code contributed to the original PDFBox project.
+Copyright (c) 2002-2007, www.pdfbox.org
+
+Includes the Adobe Glyph List
+Copyright 1997, 1998, 2002, 2007, 2010 Adobe Systems Incorporated.
+
+Includes the Zapf Dingbats Glyph List
+Copyright 2002, 2010 Adobe Systems Incorporated.
+
+Includes the Bidi Mirroring Glyph Property (BidiMirroring-8.0.0.txt)
+Copyright 1991-2015 Unicode, Inc.
+
+Includes parts of TwelveMonkeys ImageIO
+Copyright 2008-2016 Harald Kuhr
+
+-----------------------------------------------------------------
+
+pdfbox-tools-2.0.9.jar
+https://pdfbox.apache.org/
+Apache License, Version 2.0
+
+Apache PDFBox tools
+Copyright 2002-2018 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+-----------------------------------------------------------------
+
+jbig2-imageio-3.0.0.jar
+https://pdfbox.apache.org/
+Apache License, Version 2.0
+
+PDFBox JBIG2 ImageIO plugin
+Copyright 2018 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+-----------------------------------------------------------------
+
+itext-2.1.7.jar
+http://www.lowagie.com/iText/
+Mozilla Public License Version 1.1
+
+Copyright (c) 1998-2024 Apryse Group NV
+
+-----------------------------------------------------------------
+
+ghost4j-1.0.1.jar
+GNU Lesser General Public License v3.0
+http://www.ghost4j.org/
+
+Copyright © 2008-2024 Gilles Grousset All Rights Reserved.
+
+-----------------------------------------------------------------
+
+jna-4.1.0.jar
+https://github.com/java-native-access/
+Apache License, Version 2.0
+
+SPDX-License-Identifier: Apache-2.0 OR LGPL-2.1
+
+Java Native Access (JNA) is licensed under the LGPL, version 2.1
+or later, or (from version 4.0 onward) the Apache License,
+version 2.0.
+
+You can freely decide which license you want to apply to the project.
+
+You may obtain a copy of the LGPL License at:
+
+http://www.gnu.org/licenses/licenses.html
+
+A copy is also included in the downloadable source code package
+containing JNA, in file "LGPL2.1", under the same directory
+as this file.
+
+You may obtain a copy of the Apache License at:
+
+http://www.apache.org/licenses/
+
+A copy is also included in the downloadable source code package
+containing JNA, in file "AL2.0", under the same directory
+as this file.
+
+Commercial support may be available, please e-mail
+twall[at]users[dot]sf[dot]net.
+
+-----------------------------------------------------------------
+
+jboss-vfs-3.2.12.Final.jar
+https://github.com/jbossas/jboss-vfs/
+Apache License, Version 2.0
+
+JBoss, Home of Professional Open Source.
+Copyright 2011, Red Hat, Inc., and individual contributors
+as indicated by the @author tags.
+
+-----------------------------------------------------------------
+
+lept4j-1.6.4.jar
+https://tess4j.sourceforge.net/
+Apache License, Version 2.0
+
+Copyright @ 2015 Quan Nguyen
+
+-----------------------------------------------------------------
+
+tess4j-3.4.8.jar
+https://tess4j.sourceforge.net/lept4j.html
+Apache License, Version 2.0
+
+Copyright @ 2014 Quan Nguyen
+
+-----------------------------------------------------------------
+
+xmlgraphics-commons-1.5.jar
+https://xmlgraphics.apache.org/commons/
+Apache License, Version 2.0
+
+Apache XML Graphics Commons
+Copyright 2006-2023 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+-----------------------------------------------------------------
+
+log4j-over-slf4j-1.7.25.jar
+https://www.slf4j.org/
+Apache License, Version 2.0, The MIT License
+
+This component is part of the SLF4J project but contains code originally developed by The Apache Software Foundation as part of the Apache log4j project.
+
+1. Original Apache log4j code:
+   Copyright 2001-2004 The Apache Software Foundation
+   Licensed under the Apache License, Version 2.0
+
+2. SLF4J project modifications and additions:
+   Copyright (c) 2004-2017 QOS.ch
+   Licensed under the MIT License
+
+------------------------------------------------------------------
+
+jai-imageio-core-1.4.0.jar
+https://github.com/jai-imageio/jai-imageio-core/
+BSD 3-clause with an additional nuclear disclaimer
+
+Copyright © 2005 Sun Microsystems, Inc., 4150 Network Circle, Santa 
+Clara, California 95054, U.S.A. All rights reserved.
+
+U.S. Government Rights - Commercial software.  Government users are 
+subject to the Sun Microsystems, Inc. standard license agreement and 
+applicable provisions of the FAR and its supplements.  
+
+Use is subject to license terms.  
+
+This distribution may include materials developed by third parties.
+
+Sun, Sun Microsystems, the Sun logo and Java are trademarks or
+registered trademarks of Sun Microsystems, Inc. in the U.S. and 
+other countries.
+
+This product is covered and controlled by U.S. Export Control laws and
+may be subject to the export or import laws in other countries.  
+Nuclear, missile, chemical biological weapons or nuclear maritime end
+uses or end users, whether direct or indirect, are strictly 
+prohibited.  Export or reexport to countries subject to U.S. embargo or 
+to entities identified on U.S. export exclusion lists, including, but 
+not limited to, the denied persons and specially designated nationals
+lists is strictly prohibited.
+
+Copyright © 2005 Sun Microsystems, Inc., 4150 Network Circle, Santa 
+Clara, California 95054, Etats-Unis. Tous droits réservés.
+
+L'utilisation est soumise aux termes de la Licence.
+
+Cette distribution peut comprendre des composants développés par des 
+tierces parties.
+
+Sun, Sun Microsystems, le logo Sun et Java sont des marques de fabrique
+ou des marques déposées de Sun Microsystems, Inc. aux Etats-Unis et 
+dans d'autres pays.
+
+Ce produit est soumis à la législation américaine en matière de 
+contrôle des exportations et peut être soumis à la règlementation en 
+vigueur dans d'autres pays dans le domaine des exportations et 
+importations. Les utilisations, ou utilisateurs finaux, pour des armes 
+nucléaires,des missiles, des armes biologiques et chimiques ou du 
+nucléaire maritime, directement ou indirectement, sont strictement 
+interdites. Les exportations ou réexportations vers les pays sous 
+embargo américain, ou vers des entités figurant sur les listes 
+d'exclusion d'exportation américaines, y compris, mais de manière non 
+exhaustive, la liste de personnes qui font objet d'un ordre de ne pas 
+participer, d'une façon directe ou indirecte, aux exportations des 
+produits ou des services qui sont régis  par la législation américaine 
+en matière de contrôle des exportations et la liste de ressortissants 
+spécifiquement désignés, sont rigoureusement interdites.
+
+
+Copyright © 2010-2018 Stian Soiland-Reyes
+Copyright © 2015 Peter Hull
+Copyright © 2010-2018 University of Manchester
+Copyright © 2015 Yannick De Turck
+Copyright © 2015 Robin Stevens
+Copyright © 2015 Mark Carroll
+Copyright © 2015 Butch Howard
+Copyright © 2015-2016 Luca Bellonda
+Copyright © 2017 Ghislain Bonamy
+Copyright © 2017 Curtis Rueden
+Copyright © 2017 Roger Leigh
+Copyright © 2017 Mykola Pavluchynskyi
+Copyright © 2017 Sebastien Besson
+Copyright © 2018 Peter Jodeleit
+
+-----------------------------------------------------------------
+
+hamcrest-core-1.3.jar
+The 3-Clause BSD License
+https://github.com/hamcrest/JavaHamcrest/
+
+Copyright (c) 2000-2015 www.hamcrest.org All rights reserved.
+
+-----------------------------------------------------------------
+
+jul-to-slf4j-1.7.25.jar
+MIT License
+https://www.slf4j.org/
+
+Copyright (c) 2004-2011 QOS.ch All rights reserved.
+
+-----------------------------------------------------------------
+
+slf4j-api-1.7.25.jar
+https://www.slf4j.org/
+MIT License
+
+Copyright (c) 2004-2023 QOS.ch All rights reserved.
+
+-----------------------------------------------------------------
+
+junit-4.12.jar
+https://junit.org/junit4/
+Eclipse Public License v1.0
+
+Copyright © 2002-2021 JUnit. All Rights Reserved.
+   ===================================================================================
+   ==  Notices and attributions required by libraries that the project depends on   ==
+   ===================================================================================
+
+ The JUnit depends on Java Hamcrest (http://hamcrest.org/JavaHamcrest/).
+
+-----------------------------------------------------------------
+
+logback-classic-1.2.3.jar
+https://logback.qos.ch/
+Eclipse Public License v1.0
+
+Logback LICENSE
+---------------
+
+Logback: the reliable, generic, fast and flexible logging framework.
+Copyright (C) 1999-2015, QOS.ch. All rights reserved.
+
+This program and the accompanying materials are dual-licensed under
+either the terms of the Eclipse Public License v1.0 as published by
+the Eclipse Foundation
+ 
+  or (per the licensee's choosing)
+ 
+under the terms of the GNU Lesser General Public License version 2.1
+as published by the Free Software Foundation.
+
+-----------------------------------------------------------------
+
+logback-core-1.2.3.jar
+https://logback.qos.ch/
+Eclipse Public License v1.0
+
+Logback LICENSE
+---------------
+
+Logback: the reliable, generic, fast and flexible logging framework.
+Copyright (C) 1999-2015, QOS.ch. All rights reserved.
+
+This program and the accompanying materials are dual-licensed under
+either the terms of the Eclipse Public License v1.0 as published by
+the Eclipse Foundation
+ 
+  or (per the licensee's choosing)
+ 
+under the terms of the GNU Lesser General Public License version 2.1
+as published by the Free Software Foundation.
+
+-----------------------------------------------------------------

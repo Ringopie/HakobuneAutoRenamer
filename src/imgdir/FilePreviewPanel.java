@@ -17,53 +17,53 @@ import javax.swing.border.EmptyBorder;
  */
 public class FilePreviewPanel extends JPanel {
 
-    private BufferedImage image;
-    private JTextField textField;
-    private JCheckBox useCheckBox;
-    private JCheckBox hardCheckBox;
+	private BufferedImage image;
+	private JTextField textField;
+	private JCheckBox useCheckBox;
+	private JCheckBox hardCheckBox;
 
-    public FilePreviewPanel(String fileName, String text, BufferedImage image) {
-        this.image = image;
-        setLayout(new BorderLayout());
-        setBorder(new EmptyBorder(5, 5, 5, 5));
+	public FilePreviewPanel(String fileName, String text, BufferedImage image) {
+		this.image = image;
+		setLayout(new BorderLayout());
+		setBorder(new EmptyBorder(5, 5, 5, 5));
 
-        JLabel nameLabel = new JLabel("File: " + fileName);
-        add(nameLabel, BorderLayout.NORTH);
+		JLabel nameLabel = new JLabel("File: " + fileName);
+		add(nameLabel, BorderLayout.NORTH);
 
-        if (image != null) {
-            JLabel imageLabel = new JLabel(new ImageIcon(image.getScaledInstance(200, -1, Image.SCALE_SMOOTH)));
-            add(imageLabel, BorderLayout.CENTER);
-        }
+		if (image != null) {
+			JLabel imageLabel = new JLabel(new ImageIcon(image.getScaledInstance(200, -1, Image.SCALE_SMOOTH)));
+			add(imageLabel, BorderLayout.CENTER);
+		}
 
-        JPanel textPanel = new JPanel();
-        textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.X_AXIS));
+		JPanel textPanel = new JPanel();
+		textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.X_AXIS));
 
-        textField = new JTextField(text);
-        textField.setMaximumSize(new Dimension(200, 30));
-        textPanel.add(textField);
+		textField = new JTextField(text);
+		textField.setMaximumSize(new Dimension(200, 30));
+		textPanel.add(textField);
 
-        useCheckBox = new JCheckBox("保存対象にする", true);
-        textPanel.add(useCheckBox);
+		useCheckBox = new JCheckBox("保存対象にする", true);
+		textPanel.add(useCheckBox);
 
-        hardCheckBox = new JCheckBox("強襲");
-        textPanel.add(hardCheckBox);
+		hardCheckBox = new JCheckBox("強襲");
+		textPanel.add(hardCheckBox);
 
-        add(textPanel, BorderLayout.SOUTH);
-    }
+		add(textPanel, BorderLayout.SOUTH);
+	}
 
-    public BufferedImage getImage() {
-        return image;
-    }
+	public BufferedImage getImage() {
+		return image;
+	}
 
-    public JTextField getTextField() {
-        return textField;
-    }
+	public JTextField getTextField() {
+		return textField;
+	}
 
-    public boolean isSelected() {
-        return useCheckBox.isSelected();
-    }
+	public boolean isSelected() {
+		return useCheckBox.isSelected();
+	}
 
-    public boolean isHardSelected() {
-        return hardCheckBox.isSelected();
-    }
+	public boolean isHardSelected() {
+		return hardCheckBox.isSelected();
+	}
 }

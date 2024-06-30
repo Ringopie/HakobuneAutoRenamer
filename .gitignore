@@ -14,3 +14,7 @@
 *.swp
 *.bak
 /bin/
+/.gradle/
+/build/
+build.bat
+launch.bat
