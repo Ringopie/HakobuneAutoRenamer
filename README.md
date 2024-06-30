@@ -49,7 +49,7 @@ https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=ms
 詳細については、THIRD_PARTY_LICENSE.txtファイルを参照してください。<br>
 <br>
 本プロジェクトを使用、変更、または配布する際は、Apache License 2.0および含まれる各ライブラリのライセンス条項を遵守した上で、必要であれば以下のコピーライト表記をご利用ください。<br>
-<code>Copyright © 2024 YOURI All rights reserved.</code>
+<code>Copyright © 2024 Ringopie All rights reserved.</code>
 
 ## 免責
 
